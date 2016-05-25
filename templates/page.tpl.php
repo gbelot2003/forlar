@@ -120,10 +120,8 @@
    </div>
    <div class="clear"></div>
    <?php endif; ?>
-  
- <?php if($page['sidebar_first']) { $contentwid= "eleven"; } else { $contentwid= "sixteen"; } ?>
- 
- <div id="content" class="<?php print $contentwid; ?> columns">
+   
+ <div id="content" class="sixteen columns">
   <div id="breadcrumbs"><?php if (theme_get_setting('breadcrumbs', 'responsive')): ?><?php if ($breadcrumb): print $breadcrumb; endif;?><?php endif; ?></div>
    <section id="post-content" role="main">
     <?php print $messages; ?>
@@ -136,13 +134,7 @@
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
     <?php print render($page['content']); ?>
   </section> <!-- /#main -->
- </div>
-
-  <?php if ($page['sidebar_first']): ?>
-    <aside id="sidebar-first" role="complementary" class="sidebar five columns">
-      <?php print render($page['sidebar_first']); ?>
-    </aside>  <!-- /#sidebar-first -->
-  <?php endif; ?>
+ </div> 
 
   <div class="clear"></div>
   
