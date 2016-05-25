@@ -125,15 +125,15 @@
      <div class="flexslider">
       <ul class="slides">
         <li>
-          <a href="<?php print url($url1); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'responsive') . '/images/slide-image-1.jpg'; ?>"/></a>
+          <a href="<?php print url($url1); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'forlar') . '/images/slide-image-1.jpg'; ?>"/></a>
           <?php if ($cap1): ?> <div class="flex-caption"> <h3> <?php print $cap1; ?> </h3> </div>  <?php endif; ?>
         </li>
         <li>
-          <a href="<?php print url($url2); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'responsive') . '/images/slide-image-2.jpg'; ?>"/></a>
+          <a href="<?php print url($url2); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'forlar') . '/images/slide-image-2.jpg'; ?>"/></a>
           <?php if ($cap2): ?> <div class="flex-caption"> <h3> <?php print $cap2; ?> </h3> </div> <?php endif; ?>
         </li>
         <li>
-          <a href="<?php print url($url3); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'responsive') . '/images/slide-image-3.jpg'; ?>"/></a>
+          <a href="<?php print url($url3); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'forlar') . '/images/slide-image-3.jpg'; ?>"/></a>
           <?php if ($cap3): ?> <div class="flex-caption"> <h3> <?php print $cap3; ?> </h3> </div> <?php endif; ?>
         </li>
       </ul>
@@ -166,7 +166,8 @@
     <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
     <?php print render($page['help']); ?>
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-    <?php print render($page['content']); ?>
+    <h2>Bienvenidos</h2>
+    <p>BUFETE FORLAR. Es una firma legal hondureña que se ha especializado como bufete de litigios, contando para ello con amplia experiencia, sobre todo en materia: civil, mercantil, contencioso administrativo, penal y arbitral.</p>
   </section> <!-- /#main -->
  </div>
  <div class="clear"></div>
@@ -200,7 +201,7 @@
     <?php endif; ?>
     </div>
 <?php endif; ?>
-  
-<div id="copyright" class="container">
-  <div class="clear"></div>
+
+<div class="container">
+  <img src="<?php print base_path() . drupal_get_path('theme', 'forlar') ?>/images/bufete4.jpg" alt="información" style="width:100%" />
 </div>

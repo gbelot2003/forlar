@@ -3,7 +3,7 @@
  * Implements hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
  */
-function responsive_html_head_alter(&$head_elements) {
+function forlar_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
   );
@@ -12,7 +12,7 @@ function responsive_html_head_alter(&$head_elements) {
 /**
  * Insert themed breadcrumb page navigation at top of the node content.
  */
-function responsive_breadcrumb($variables) {
+function forlar_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
     // Use CSS to hide titile .element-invisible.
@@ -27,7 +27,7 @@ function responsive_breadcrumb($variables) {
 /**
  * Override or insert variables into the html template.
  */
-function responsive_process_html(&$vars) {
+function forlar_process_html(&$vars) {
   // Hook into color.module
   if (module_exists('color')) {
     _color_html_alter($vars);
@@ -37,7 +37,7 @@ function responsive_process_html(&$vars) {
 /**
  * Override or insert variables into the page template.
  */
-function responsive_process_page(&$variables) {
+function forlar_process_page(&$variables) {
   // Hook into color.module.
   if (module_exists('color')) {
     _color_page_alter($variables);
@@ -48,7 +48,7 @@ function responsive_process_page(&$variables) {
 /**
  * Override or insert variables into the page template.
  */
-function responsive_preprocess_page(&$vars) {
+function forlar_preprocess_page(&$vars) {
   if (isset($vars['main_menu'])) {
     $vars['main_menu'] = theme('links__system_main_menu', array(
       'links' => $vars['main_menu'],
@@ -86,7 +86,7 @@ function responsive_preprocess_page(&$vars) {
 /**
  * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
  */
-function responsive_menu_local_tasks(&$variables) {
+function forlar_menu_local_tasks(&$variables) {
   $output = '';
 
   if (!empty($variables['primary'])) {
@@ -107,14 +107,14 @@ function responsive_menu_local_tasks(&$variables) {
 /**
  * Override or insert variables into the node template.
  */
-function responsive_preprocess_node(&$variables) {
+function forlar_preprocess_node(&$variables) {
   $node = $variables['node'];
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
   }
 }
 
-function responsive_page_alter($page) {
+function forlar_page_alter($page) {
   // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   $viewport = array(
     '#type' => 'html_tag',
@@ -131,6 +131,6 @@ function responsive_page_alter($page) {
  * Add javascript files for front-page jquery slideshow.
  */
 if (drupal_is_front_page()) {
-  drupal_add_js(drupal_get_path('theme', 'responsive') . '/js/jquery.flexslider-min.js');
-  drupal_add_js(drupal_get_path('theme', 'responsive') . '/js/slide.js');
+  drupal_add_js(drupal_get_path('theme', 'forlar') . '/js/jquery.flexslider-min.js');
+  drupal_add_js(drupal_get_path('theme', 'forlar') . '/js/slide.js');
 }

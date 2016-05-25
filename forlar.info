@@ -32,20 +32,11 @@ features[] = main_menu
 features[] = secondary_menu
 settings[breadcrumbs]  = 1
 settings[slideshow_display]  = 1
-settings[slide1_desc]  = "About us"
-settings[slide2_desc]  = "Our Product"
-settings[slide3_desc]  = "Our Service"
-settings[slide1_url]  = "node/1"
-settings[slide2_url]  = "node/2"
-settings[slide3_url]  = "node/3"
+settings[slide1_url]  = "slide-image-1.jpg"
+settings[slide2_url]  = "slide-image-2.jpg"
+settings[slide3_url]  = "slide-image-3.jpg"
 settings[socialicon_display]  = 1
 settings[twitter_url]  = "http://www.twitter.com/saranquardz"
 settings[facebook_url]  = "http://www.facebook.com/saran.tech"
 settings[googleplus_url]  = "https://plus.google.com/u/0/118427729176204518525"
 settings[linkedin_url]  = "http://in.linkedin.com/in/devsaran"
-; Information added by drupal.org packaging script on 2013-09-02
-version = "7.x-1.7"
-core = "7.x"
-project = "responsive"
-datestamp = "1378144928"
-

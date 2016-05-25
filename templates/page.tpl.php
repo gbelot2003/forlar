@@ -112,40 +112,6 @@
 </div>
   
 <div class="container" id="content-contain">
-
-  <?php if ($is_front): ?>
-    <div class="container">
-    <?php if (theme_get_setting('slideshow_display', 'responsive')): ?>
-      <!-- Slides -->
-      <?php 
-      $url1 = check_plain(theme_get_setting('slide1_url','responsive')); $cap1 = check_markup(theme_get_setting('slide1_desc','responsive'), 'full_html');
-      $url2 = check_plain(theme_get_setting('slide2_url','responsive')); $cap2 = check_markup(theme_get_setting('slide2_desc','responsive'), 'full_html');
-      $url3 = check_plain(theme_get_setting('slide3_url','responsive')); $cap3 = check_markup(theme_get_setting('slide3_desc','responsive'), 'full_html');
-      ?>
-     <div class="flexslider">
-      <ul class="slides">
-        <li>
-          <a href="<?php print url($url1); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'responsive') . '/images/slide-image-1.jpg'; ?>"/></a>
-          <?php if ($cap1): ?> <div class="flex-caption"> <h3> <?php print $cap1; ?> </h3> </div>  <?php endif; ?>
-        </li>
-        <li>
-          <a href="<?php print url($url2); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'responsive') . '/images/slide-image-2.jpg'; ?>"/></a>
-          <?php if ($cap2): ?> <div class="flex-caption"> <h3> <?php print $cap2; ?> </h3> </div> <?php endif; ?>
-        </li>
-        <li>
-          <a href="<?php print url($url3); ?>"><img src="<?php print base_path() . drupal_get_path('theme', 'responsive') . '/images/slide-image-3.jpg'; ?>"/></a>
-          <?php if ($cap3): ?> <div class="flex-caption"> <h3> <?php print $cap3; ?> </h3> </div> <?php endif; ?>
-        </li>
-      </ul>
-      </div>
-     <?php endif; ?>
-        
-      <?php if ($page['front_welcome']): ?>
-        <div id="front-welcome"> <?php print render($page['front_welcome']); ?></div>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
-  
     
   
   <?php if ($page['header']): ?>
@@ -209,8 +175,7 @@
     <?php endif; ?>
     </div>
 <?php endif; ?>
-  
-<div id="copyright" class="container">
- <div class="credit"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> <br/> <?php print t('Developed by'); ?> <a href="http://www.devsaran.com" target="_blank">Devsaran</a>.</div>
-  <div class="clear"></div>
+
+<div class="container">
+  <img src="<?php print base_path() . drupal_get_path('theme', 'forlar') ?>/images/bufete4.jpg" alt="información" style="width:100%" />
 </div>
